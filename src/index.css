@@ -1,0 +1,8 @@
+body {
+  background-color: lightgray !important;
+}
+
+.search-bar {
+  margin: 20px;
+  display: flex;
+}
