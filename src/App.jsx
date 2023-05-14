@@ -1,4 +1,5 @@
 import Data from "./Data";
+import "./index.css";
 
 function App() {
   return (

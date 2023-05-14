@@ -1,8 +1,30 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
+
 body {
-  background-color: lightgray !important;
+  background-color: white;
 }
 
 .search-bar {
   margin: 20px;
   display: flex;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.form-control {
+  width: 100px;
+}
+
+.form-control {
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+.dropdown {
+  margin-left: 47%;
+  margin-top: 20px;
 }

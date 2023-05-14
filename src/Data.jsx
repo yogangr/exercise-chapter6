@@ -3,6 +3,8 @@ import React from "react";
 import Car from "./Car";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./index.css";
+import Form from "react-bootstrap/Form";
 
 function Data() {
   const [cars, setCars] = useState([]);
@@ -24,9 +26,15 @@ function Data() {
 
   const filter = (data) => {
     if (value === "true") {
-      return data.filter((item) => item.available === true && item.capacity.toString().includes(query));
+      return data.filter(
+        (item) =>
+          item.available === true && item.capacity.toString().includes(query)
+      );
     } else if (value === "false") {
-      return data.filter((item) => item.available === false && item.capacity.toString().includes(query));
+      return data.filter(
+        (item) =>
+          item.available === false && item.capacity.toString().includes(query)
+      );
     } else {
       return data;
     }
@@ -34,18 +42,23 @@ function Data() {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Cari..."
-        className="search-input"
-        onChange={(e) => setQuery(e.target.value)}
-      />
       <div className="dropdown">
-        <select value={value} onChange={(e) => setValue(e.target.value)}>
+        <Form.Select
+          className="w-auto"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        >
           <option value="true">Dengan Sopir</option>
           <option value="false">Tanpa Sopir</option>
-        </select>
+        </Form.Select>
       </div>
+      <input
+        className="form-control w-auto"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        onChange={(e) => setQuery(e.target.value)}
+      ></input>
       <Car data={filter(cars)} />
     </div>
   );
