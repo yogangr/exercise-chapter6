@@ -50,6 +50,7 @@ function Data() {
         >
           <option value="true">Dengan Sopir</option>
           <option value="false">Tanpa Sopir</option>
+          <option value="0">Dengan Sopir/Tanpa Sopir</option>
         </Form.Select>
       </div>
       <input
