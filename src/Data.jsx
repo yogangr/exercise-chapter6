@@ -36,7 +36,9 @@ function Data() {
           item.available === false && item.capacity.toString().includes(query)
       );
     } else {
-      return data;
+      return (
+        data && data.filter((item) => item.capacity.toString().includes(query))
+      );
     }
   };
 

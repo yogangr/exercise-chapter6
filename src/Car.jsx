@@ -8,7 +8,7 @@ const Car = ({ data }) => {
   return (
     <div className="container align-items-center">
       <table className="table table-bordered w-100 table-striped">
-        <thead>
+        <thead className="table-dark">
           <tr>
             <th>No</th>
             <th>Model</th>
