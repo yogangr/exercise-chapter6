@@ -48,9 +48,12 @@ function Data() {
           value={value}
           onChange={(e) => setValue(e.target.value)}
         >
+          <option value="0" selected disabled hidden>
+            Pilih Kategori
+          </option>
           <option value="true">Dengan Sopir</option>
           <option value="false">Tanpa Sopir</option>
-          <option value="0">Dengan Sopir/Tanpa Sopir</option>
+          <option value="1">Tampilkan Semua</option>
         </Form.Select>
       </div>
       <input
